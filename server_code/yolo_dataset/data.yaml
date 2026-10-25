@@ -1,0 +1,5 @@
+path: /tmp/yolo_final
+train: images/train
+val: images/val
+nc: 9
+names: ["sanmingzhi", "heweidao", "shupian", "zhijin", "maidong", "kouxiangtang", "pingguo", "chengzi", "kele"]

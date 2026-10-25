@@ -1,0 +1,14 @@
+# 大型二进制文件（不入库，如需运行请从本地原项目拷贝）
+*.ply
+*.pt
+*.jpg
+*.jpeg
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+# 本地环境
+*.log
+.idea/
+.vscode/
+.DS_Store

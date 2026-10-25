@@ -1,0 +1,18 @@
+# ============ 大型二进制文件（体积过大，不入库） ============
+# 3DGS 点云模型（459MB，如需运行请从本地原项目拷贝）
+*.ply
+# 模型权重 / 训练检查点（43MB）
+*.pt
+# 数据集图片（110MB，yolo_dataset 的 images/annotated 均为 jpg）
+*.jpg
+*.jpeg
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# ============ 本地环境 ============
+*.log
+.idea/
+.vscode/
+.DS_Store

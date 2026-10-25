@@ -1,0 +1,5 @@
+models/meshes filter=lfs diff=lfs merge=lfs -text
+models/textures filter=lfs diff=lfs merge=lfs -text
+examples/supermarket_sorting/models/3dgs/shentoon/*.ply filter=lfs diff=lfs merge=lfs -text
+examples/supermarket_sorting/models/3dgs/shentoon/yellowbox_obstacle_fit.ply -filter -diff -merge -text
+examples/supermarket_sorting/perception/checkpoints/*.pt filter=lfs diff=lfs merge=lfs -text

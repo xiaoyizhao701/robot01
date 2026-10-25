@@ -1,0 +1,17 @@
+# 增量更新镜像基于 CUDA 12.8 / PyTorch cu128 的 perception 基底。
+ARG BASE_IMAGE=supermarket_sorting_task:perception-cu128
+FROM ${BASE_IMAGE}
+
+WORKDIR /workspace
+RUN rm -rf /workspace/supermarket_sorting_task
+COPY . /workspace/supermarket_sorting_task
+WORKDIR /workspace/supermarket_sorting_task
+
+ENV TORCH_EXTENSIONS_DIR=/root/.cache/torch_extensions
+
+RUN python3 -m pip install --no-cache-dir -e ".[lidar]"
+
+# 重置被固化成 [bash] 的坏 ENTRYPOINT，恢复标准 shell 形式，
+# 使 `docker run <img> bash -lc "..."` 正常工作
+ENTRYPOINT []
+CMD ["bash"]
